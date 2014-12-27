@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <title>Take Home Login Form </title>
+  
+     <style>
+/* @import url(http://fonts.googleapis.com/css?family=Exo:100,200,400);
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:700,400,300);
+ */
+body{
+	margin: 0;
+	padding: 0;
+	background: #fff;
+
+	color: #fff;
+	font-family: Arial;
+	font-size: 12px;
+}
+
+.body{
+	position: absolute;
+	top: -55px;
+	left: -10px;
+	right: -10px;
+	bottom: -40px;
+	width: auto;
+	height: auto;
+	background-image: url(img/login.jpg);
+	background-size: cover;
+	-webkit-filter: blur(5px);
+	z-index: 0;
+}
+
+.grad{
+	position: absolute;
+	top: -20px;
+	left: -20px;
+	right: -40px;
+	bottom: -40px;
+	width: auto;
+	height: auto;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.65))); /* Chrome,Safari4+ */
+	z-index: 1;
+	opacity: 0.7;
+}
+
+.header{
+	position: absolute;
+	top: calc(50% - 6px);
+	left: calc(50% - 315px);
+	z-index: 2;
+}
+
+.header div{
+	float: left;
+	color: orangered;
+	font-family: Georgia;
+	font-size: 50px;
+	font-weight: Bolder;
+	font-style: italic;
+	font-variant: small-caps;
+	
+}
+
+.header div span{
+	color: #5379fa !important;
+}
+
+.header p 
+{
+	color: red;
+    font-family: Georgia;
+    font-size: 12px;
+    font-style: oblique;
+    font-variant: normal;
+    font-weight: bold;
+    position: absolute;
+    text-decoration: blink;
+    text-shadow: 7px 7px 7px black;
+    top: calc(73% - 2px);
+
+}
+
+.login {
+	position: absolute;
+	top: calc(50% - 75px);
+	left: calc(50% - 5px);
+	height: 150px;
+	width: 350px;
+	padding: 10px;
+	z-index: 2;
+}
+
+.login input[type=text]{
+	width: 250px;
+	height: 30px;
+	background: transparent;
+	border: 1px solid rgba(255,255,255,0.6);
+	border-radius: 2px;
+	color: #fff;
+	font-family: 'Exo', sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	padding: 4px;
+}
+
+.login input[type=password]{
+	width: 250px;
+	height: 30px;
+	background: transparent;
+	border: 1px solid rgba(255,255,255,0.6);
+	border-radius: 2px;
+	color: #fff;
+	font-family: 'Exo', sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	padding: 4px;
+	margin-top: 10px;
+}
+
+.login input[type=submit]{
+	background: none repeat scroll 0 0 #fff;
+    border: 1px solid #fff;
+    border-radius: 18px;
+    color: #423f1e;
+    cursor: pointer;
+    font-family: "Exo",small-caption;
+    font-size: 18px;
+    font-weight: 400;
+    height: 35px;
+    margin-top: 10px;
+    padding: 6px;
+    width: 260px;
+}
+
+.login input[type=submit]:hover{
+	opacity: 0.8;
+}
+
+.login input[type=submit]:active{
+	opacity: 0.6;
+}
+
+.login input[type=text]:focus{
+	outline: none;
+	border: 1px solid rgba(255,255,255,0.9);
+}
+
+.login input[type=password]:focus{
+	outline: none;
+	border: 1px solid rgba(255,255,255,0.9);
+}
+
+.login input[type=submit]:focus{
+	outline: none;
+}
+
+.signup {
+	position: absolute;
+	bottom: calc(20% - 75px);
+	left: calc(50% - 5px);
+	height: 150px;
+	width: 350px;
+	padding: 10px;
+	z-index: 2;
+}
+
+.signup input[type=submit]{
+	background: none repeat scroll 0 0 #fff;
+    border: 1px solid #fff;
+    border-radius: 18px;
+    color: #423f1e;
+    cursor: pointer;
+    font-family: "Exo",small-caption;
+    font-size: 18px;
+    font-weight: 400;
+    height: 35px;
+    margin-top: -14px;
+    padding: 6px;
+    width: 260px;
+}
+
+.signup input[type=submit]:hover{
+	opacity: 0.8;
+}
+
+.signup input[type=submit]:active{
+	opacity: 0.6;
+}
+
+.signup input[type=submit]:focus{
+	outline: none;
+}
+
+::-webkit-input-placeholder{
+   color: rgba(255,255,255,0.6);
+}
+
+::-moz-input-placeholder{
+   color: rgba(255,255,255,0.6);
+}
+</style>
+
+   <!--  <script src="js/prefixfree.min.js"></script> -->
+
+</head>
+
+<body>
+
+  <div class="body"></div>
+		<div class="grad"></div>
+		<div class="header">
+			<div>Take<span>Home</span></div>
+			<p class="tagline"> Live In Your World, This Is Where You Want To Be </p>
+		</div>
+		
+		<form name = "Login" action="LoginServlet" method="POST">
+			<div class="login">
+				<input type="text" placeholder="Username" id="user" name="user"><br>
+				<input type="password" placeholder="Password" name="password"><br>
+				<input type="submit" value="Login" name="login">
+			</div>		
+		</form>
+		
+		<!-- <form action="SignUpServlet" method="get"> -->
+			<a class="signup" href="SignUp.html">
+			
+				<input type="submit" value="SignUp" name="signup">
+				
+			</a>
+		<!-- </form> -->
+		
+
+<!--   <script src='http://codepen.io/assets/libs/fullpage/jquery.js'></script> -->
+
+</body>
+
+</html>
